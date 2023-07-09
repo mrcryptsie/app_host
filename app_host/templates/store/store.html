@@ -1,0 +1,119 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>News</title>
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet" type="text/css">
+		<link href="{% static 'fonts/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,300&display=swap" rel="stylesheet">
+
+		<!--[if lt IE 9]>
+		<script src="{% static 'js/ie-support/html5.js' %}"></script>
+		<script src="{% static 'js/ie-support/respond.js' %}"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		
+		<div id="site-content">
+			
+			<header class="site-header">
+				<div class="top-header">
+					<div class="container">
+						<a href="tel:80049123441">Appellez: (229) 62 02 74 28</a>
+						
+						<nav class="member-navigation pull-right">
+							<a href="inscription.html"><i class="fa fa-user"></i> S'inscrire</a>
+							<a href="#"><i class="fa fa-lock"></i> Connexion</a>
+						</nav> <!-- .member-navigation -->
+					</div> <!-- .container -->
+				</div> <!-- .top-header -->
+
+				<div class="bottom-header">
+					<div class="container">
+						<a href="index.html" class="branding pull-left">
+							<img src="{% static 'images/logo-icon.png' %}" alt="Site title" class="logo-icon">
+							<h1 class="site-title">CAMPUS <span>HOME</span></h1> 
+							<h2 class="site-description">Trouvez votre chez-vous étudiant</h2>
+						</a> <!-- #branding -->
+						
+						<nav class="main-navigation pull-right">
+							<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+							<ul class="menu">
+								<li class="menu-item current-menu-item"><a href="news.html">Nouvelles</a></li>
+								<li class="menu-item"><a href="about-us.html">Equipes</a></li>
+								<li class="menu-item"><a href="services.html">FAQ</a></li>
+								<li class="menu-item"><a href="contact.html">Contacts</a></li>
+							</ul>
+						</nav> <!-- .main-navigation -->
+					</div> <!-- .container -->
+				</div> <!-- .bottom-header -->
+			</header> <!-- .site-header -->
+
+			<main class="content">
+				<div class="breadcrumbs">
+					<div class="container">
+						<a href="index.html">Acceuil</a> &rarr;
+						<a href="#">Nouvelles</a>
+					</div>
+				</div>
+
+				
+			</main> <!-- .content -->
+			<footer class="site-footer wow fadeInUp">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-md-6">
+							
+							<div class=" branding">
+								<img src="{% static 'images/logo-footer.png' %}" alt="Site title" class="logo-icon">
+								<h1 class="site-title"><a href="#">Campus<span>Home</span></a></h1> 
+								<h2 class="site-description">Trouvez chez-vous étudiant</h2>
+							</div> <!-- .branding -->
+
+							<p class="copy">Copyright 2023 Campus Home. Conçue par Digital Matrix Lab. Tous droits réservés.</p>
+						</div>
+						
+						<div class="col-md-6 align-right">
+						
+							<nav class="footer-navigation">
+								<a href="#">Nouvelles</a>
+								<a href="#">Equipes</a>
+								<a href="#">FAQ</a>
+								<a href="#">Contacts</a>
+							</nav> <!-- .footer-navigation -->
+						
+							<div class="social-links">
+								<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+								<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+								<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+								<a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+							</div> <!-- .social-links -->
+						
+						</div>
+					</div>
+
+				</div>
+			</footer> <!-- .site-footer -->
+
+		</div> <!-- #site-content -->
+
+		<script src="{% static 'js/jquery-1.11.1.min.js'%}"></script>
+		<script src="{% static 'js/plugins.js' %}"></script>
+		<script src="{% static 'js/app.js'%}"></script>
+		
+	</body>
+
+</html>

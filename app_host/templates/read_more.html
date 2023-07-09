@@ -1,0 +1,197 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+  
+  <title>News</title>
+  <!-- Loading third party fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet" type="text/css">
+  <link href="{% static 'fonts/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+  <!-- Loading main css file -->
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <!--[if lt IE 9]>
+  <script src="{% static 'js/ie-support/html5.js' %}"></script>
+  <script src="{% static 'js/ie-support/respond.js' %}"></script>
+  <![endif]-->
+   
+  <style>
+    swiper-container {
+      width: 100%;
+      height: 400px;
+    }
+
+    swiper-slide {
+        background-position: center;
+      background-size: cover;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  
+  <div id="site-content">
+    
+    <header class="site-header">
+      <div class="top-header">
+        <div class="container">
+          <a href="tel:80049123441">Appellez: (229) 62 02 74 28</a>
+          
+          <nav class="member-navigation pull-right">
+            <a href="inscription.html"><i class="fa fa-user"></i> S'inscrire</a>
+            <a href="#"><i class="fa fa-lock"></i> Connexion</a>
+          </nav> <!-- .member-navigation -->
+        </div> <!-- .container -->
+      </div> <!-- .top-header -->
+
+      <div class="bottom-header">
+        <div class="container">
+          <a href="index.html" class="branding pull-left">
+            <img src="{% static 'images/logo-icon.png' %}" alt="Site title" class="logo-icon">
+            <h1 class="site-title">CAMPUS <span>HOME</span></h1> 
+            <h2 class="site-description">Trouvez votre chez-vous étudiant</h2>
+          </a> <!-- #branding -->
+          
+          <nav class="main-navigation pull-right">
+            <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+            <ul class="menu">
+              <li class="menu-item current-menu-item"><a href="news.html">Nouvelles</a></li>
+              <li class="menu-item"><a href="about-us.html">Equipes</a></li>
+              <li class="menu-item"><a href="services.html">FAQ</a></li>
+              <li class="menu-item"><a href="contact.html">Contacts</a></li>
+            </ul>
+          </nav> <!-- .main-navigation -->
+        </div> <!-- .container -->
+      </div> <!-- .bottom-header -->
+    </header> <!-- .site-header -->
+
+    <main class="content">
+      <div class="breadcrumbs">
+        <div class="container">
+          <a href="index.html">Acceuil</a> &rarr;
+          <a href="#">Lire Plus!</a>
+        </div>
+      </div>
+
+      <div class="inner-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <article class="post hentry wow fadeInUp">
+                <h2 class="entry-title"><a href="#">Marvels mighty mutants go worldwide and beyond</a></h2>
+                <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30" effect="fade"navigation="true">
+                   <swiper-slide>
+                        <img src="{% static 'image/5.jpeg' %}" style="border-radius: 25px;"> 
+                   </swiper-slide>
+                   <swiper-slide>
+                       <img src="{% static 'image/6.jpeg' %}" style="border-radius: 25px;">
+                   </swiper-slide>
+                   <swiper-slide>
+                      <img src="{% static 'image/1.jpeg' %}" style="border-radius: 25px;">
+                   </swiper-slide>
+                   <swiper-slide>
+                     <img src="{% static 'image/3.jpeg' %}" style="border-radius: 25px;">
+                   </swiper-slide>
+              </swiper-container>
+
+    
+                
+                <div class="entry-summary">
+                  <p>Iron Man, Thor, Captain America and the rest of Earths Mightiest Heroes unite to stand against the threats none can face alone. See the Avengers go up against Ultron, Kang, the Masters of Evil and more over three decades of epic action.</p>
+                  <div class="rental-info">
+                    <ul>
+                      <li>Type de location: Appartement</li>
+                      <li>Prix du loyer: $1000/mois</li>
+                      <li>Avance: $500</li>
+                      <li>Situation géographique: Ville X, Pays Y</li>
+                      <li>Contact du propriétaire: <a href="tel:1234567890">123-456-7890</a></li>
+                    </ul>
+                  </div>
+                  <p>Description du loyer: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum dui a purus vulputate, id ultricies lacus elementum. Sed nec posuere lacus. Fusce dapibus mi at elit dignissim, sit amet sagittis quam gravida. Sed vitae odio euismod, finibus tortor non, volutpat leo. Sed euismod aliquet libero, vel congue odio feugiat id. Fusce iaculis aliquet justo, ac pellentesque velit. Nulla eget sem eu sem varius lacinia non a tellus. Duis posuere mauris eu tincidunt scelerisque. Curabitur ut eleifend tellus, id tincidunt elit.</p>
+                  <div id="map"></div>
+                </div>
+                <a href="#" class="rent-button button">Louer</a>
+              </article> <!-- .post -->
+            </div>
+          </div> <!-- .row -->
+        </div> <!-- .container -->
+      </div> <!-- .inner-content -->
+    </main> <!-- .content -->
+
+    <footer class="site-footer wow fadeInUp">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6">
+                    
+                    <div class=" branding">
+                        <img src="{% static 'images/logo-footer.png' %}" alt="Site title" class="logo-icon">
+                        <h1 class="site-title"><a href="#">Campus<span>Home</span></a></h1> 
+                        <h2 class="site-description">Trouvez chez-vous étudiant</h2>
+                    </div> <!-- .branding -->
+
+                    <p class="copy">Copyright 2023 Campus Home. Conçue par Digital Matrix Lab. Tous droits réservés.</p>
+                </div>
+                
+                <div class="col-md-6 align-right">
+                
+                    <nav class="footer-navigation">
+                        <a href="#">Nouvelles</a>
+                        <a href="#">Equipes</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Contacts</a>
+                    </nav> <!-- .footer-navigation -->
+                
+                    <div class="social-links">
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                        <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                    </div> <!-- .social-links -->
+                
+                </div>
+            </div>
+
+        </div>
+    </footer> <!-- .site-footer -->
+
+  </div> <!-- #site-content -->
+  <script>
+    // Initialize and display the map
+    function initMap() {
+      var location = { lat: 40.7128, lng: -74.0060 }; // Replace with actual coordinates
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: location,
+      });
+      var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+      });
+    }
+  </script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <script src="{%static 'js/wow.min.js'%}"></script>
+  <script src="{%static 'js/script.js'%}"></script>
+</body>
+</html>
