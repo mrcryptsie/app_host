@@ -1,119 +1,174 @@
+
+{% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		
-		<title>News</title>
-		<!-- Loading third party fonts -->
-		<link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet" type="text/css">
-		<link href="{% static 'fonts/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
-		<!-- Loading main css file -->
-		<link rel="stylesheet" href="{% static 'css/animate.css' %}">
-		<link rel="stylesheet" href="{% static 'css/style.css' %}">
-		
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,300&display=swap" rel="stylesheet">
+{% block content %}
 
-		<!--[if lt IE 9]>
-		<script src="{% static 'js/ie-support/html5.js' %}"></script>
-		<script src="{% static 'js/ie-support/respond.js' %}"></script>
-		<![endif]-->
-
-	</head>
-
-	<body>
+<!-- ========================= SECTION PAGETOP ========================= -->
+<section class="section-pagetop bg">
+	<div class="container">
+		<h2 class="title-page">Our Store</h2>
 		
-		<div id="site-content">
+	</div> <!-- container //  -->
+</section>
+	<!-- ========================= SECTION INTRO END// ========================= -->
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-content padding-y">
+	<div class="container">
+	
+	<div class="row">
+		<aside class="col-md-3">
 			
-			<header class="site-header">
-				<div class="top-header">
-					<div class="container">
-						<a href="tel:80049123441">Appellez: (229) 62 02 74 28</a>
-						
-						<nav class="member-navigation pull-right">
-							<a href="inscription.html"><i class="fa fa-user"></i> S'inscrire</a>
-							<a href="#"><i class="fa fa-lock"></i> Connexion</a>
-						</nav> <!-- .member-navigation -->
-					</div> <!-- .container -->
-				</div> <!-- .top-header -->
-
-				<div class="bottom-header">
-					<div class="container">
-						<a href="index.html" class="branding pull-left">
-							<img src="{% static 'images/logo-icon.png' %}" alt="Site title" class="logo-icon">
-							<h1 class="site-title">CAMPUS <span>HOME</span></h1> 
-							<h2 class="site-description">Trouvez votre chez-vous étudiant</h2>
-						</a> <!-- #branding -->
-						
-						<nav class="main-navigation pull-right">
-							<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
-							<ul class="menu">
-								<li class="menu-item current-menu-item"><a href="news.html">Nouvelles</a></li>
-								<li class="menu-item"><a href="about-us.html">Equipes</a></li>
-								<li class="menu-item"><a href="services.html">FAQ</a></li>
-								<li class="menu-item"><a href="contact.html">Contacts</a></li>
-							</ul>
-						</nav> <!-- .main-navigation -->
-					</div> <!-- .container -->
-				</div> <!-- .bottom-header -->
-			</header> <!-- .site-header -->
-
-			<main class="content">
-				<div class="breadcrumbs">
-					<div class="container">
-						<a href="index.html">Acceuil</a> &rarr;
-						<a href="#">Boutiques</a>
-					</div>
-				</div>
-				
-				
-			</main> <!-- .content -->
-			<footer class="site-footer wow fadeInUp">
-				<div class="container">
-
-					<div class="row">
-						<div class="col-md-6">
-							
-							<div class=" branding">
-								<img src="{% static 'images/logo-footer.png' %}" alt="Site title" class="logo-icon">
-								<h1 class="site-title"><a href="#">Campus<span>Home</span></a></h1> 
-								<h2 class="site-description">Trouvez chez-vous étudiant</h2>
-							</div> <!-- .branding -->
-
-							<p class="copy">Copyright 2023 Campus Home. Conçue par Digital Matrix Lab. Tous droits réservés.</p>
-						</div>
-						
-						<div class="col-md-6 align-right">
-						
-							<nav class="footer-navigation">
-								<a href="#">Nouvelles</a>
-								<a href="#">Equipes</a>
-								<a href="#">FAQ</a>
-								<a href="#">Contacts</a>
-							</nav> <!-- .footer-navigation -->
-						
-							<div class="social-links">
-								<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-								<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-								<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-								<a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
-							</div> <!-- .social-links -->
-						
-						</div>
-					</div>
-
-				</div>
-			</footer> <!-- .site-footer -->
-
-		</div> <!-- #site-content -->
-
-		<script src="{% static 'js/jquery-1.11.1.min.js'%}"></script>
-		<script src="{% static 'js/plugins.js' %}"></script>
-		<script src="{% static 'js/app.js'%}"></script>
+	<div class="card">
+		<article class="filter-group">
+			<header class="card-header">
+				<a href="#" data-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
+					<i class="icon-control fa fa-chevron-down"></i>
+					<h6 class="title">Categories</h6>
+				</a>
+			</header>
+			<div class="filter-content collapse show" id="collapse_1" >
+				<div class="card-body">
+					
+					<ul class="list-menu">
+						<li><a href="{% url 'store' %}">Tous les Appartements</a></li>
+						{% for category in links %}
+					       <li><a href="{{ category.get_url }}">{{ category.category_name}}</a></li>
+					    {% endfor %}
+					
+					</ul>
+	
+				</div> <!-- card-body.// -->
+			</div>
+		</article> <!-- filter-group  .// -->
+		<article class="filter-group">
+			<header class="card-header">
+				<a href="#" data-toggle="collapse" data-target="#collapse_4" aria-expanded="true" class="">
+					<i class="icon-control fa fa-chevron-down"></i>
+					<h6 class="title">Sizes </h6>
+				</a>
+			</header>
+			<div class="filter-content collapse show" id="collapse_4" >
+				<div class="card-body">
+				  <label class="checkbox-btn">
+					<input type="checkbox">
+					<span class="btn btn-light"> XS </span>
+				  </label>
+	
+				  <label class="checkbox-btn">
+					<input type="checkbox">
+					<span class="btn btn-light"> SM </span>
+				  </label>
+	
+				  <label class="checkbox-btn">
+					<input type="checkbox">
+					<span class="btn btn-light"> LG </span>
+				  </label>
+	
+				  <label class="checkbox-btn">
+					<input type="checkbox">
+					<span class="btn btn-light"> XXL </span>
+				  </label>
+			</div><!-- card-body.// -->
+			</div>
+		</article> <!-- filter-group .// -->
 		
-	</body>
-
-</html>
+		<article class="filter-group">
+			<header class="card-header">
+				<a href="#" data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" class="">
+					<i class="icon-control fa fa-chevron-down"></i>
+					<h6 class="title">Price range </h6>
+				</a>
+			</header>
+			<div class="filter-content collapse show" id="collapse_3">
+				<div class="card-body">
+					
+					<div class="form-row">
+					<div class="form-group col-md-6">
+					  <label>Min</label>
+					  <!-- <input class="form-control" placeholder="$0" type="number"> -->
+						  <select class="mr-2 form-control">
+							<option value="0">$0</option>
+							<option value="50">$50</option>
+							<option value="100">$100</option>
+							<option value="150">$150</option>
+							<option value="200">$200</option>
+							<option value="500">$500</option>
+							<option value="1000">$1000</option>
+						</select>
+					</div>
+					<div class="form-group text-right col-md-6">
+					  <label>Max</label>
+						  <select class="mr-2 form-control">
+							<option value="50">$50</option>
+							<option value="100">$100</option>
+							<option value="150">$150</option>
+							<option value="200">$200</option>
+							<option value="500">$500</option>
+							<option value="1000">$1000</option>
+							<option value="2000">$2000+</option>
+						</select>
+					</div>
+					</div> <!-- form-row.// -->
+					<button class="btn btn-block btn-primary">Apply</button>
+				</div><!-- card-body.// -->
+			</div>
+		</article> <!-- filter-group .// -->
+		
+	</div> <!-- card.// -->
+	
+		</aside> <!-- col.// -->
+		<main class="col-md-9">
+	
+	<header class="border-bottom mb-4 pb-3">
+			<div class="form-inline">
+				<span class="mr-md-auto">Trouvés: <b>{{product_count}}</b> Appartements trouvés </span>
+				 
+			</div>
+	</header><!-- sect-heading -->
+	
+	<div class="row">
+		{% for product in products %}
+		<div class="col-md-4">
+			<figure class="card card-product-grid">
+				<div class="img-wrap"> 
+					
+					<img src="{{ product.images.url }}">
+					
+				</div> <!-- img-wrap.// -->
+				<figcaption class="info-wrap">
+					<div class="fix-height">
+						<a href="./product-detail.html" class="title">{{ product.product_name}}</a>
+						<div class="price-wrap mt-2">
+							<span class="price">{{ product.price }}$</span>
+							
+						</div> <!-- price-wrap.// -->
+					</div>
+					<a href="#" class="btn btn-block btn-primary">Ajouter au panier</a>
+				</figcaption>
+			</figure>
+			
+		</div> <!-- col.// -->
+	    {% endfor %}
+	</div> <!-- row end.// -->
+	
+	
+	<nav class="mt-4" aria-label="Page navigation sample">
+	  <ul class="pagination">
+		<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+		<li class="page-item active"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link" href="#">Next</a></li>
+	  </ul>
+	</nav>
+	
+		</main> <!-- col.// -->
+	
+	</div>
+	
+	</div> <!-- container .//  -->
+	</section>
+	<!-- ========================= SECTION CONTENT END// ========================= -->
+		
+{% endblock %}
